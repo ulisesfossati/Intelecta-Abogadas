@@ -1,6 +1,6 @@
 import { Box, Image, Link, HStack, Flex } from '@chakra-ui/react';
 import React from 'react';
-import logo from '../../public/logo.png';
+import logo from '/LogoPrincipal.png';
 
 const NavBar = () => {
   return (
@@ -33,6 +33,7 @@ const NavBar = () => {
           {['INICIO', 'SERVICIOS', 'NOSOTRAS', 'CONTACTO'].map((text, index) => (
             <Link
               key={index}
+              fontFamily={'Barlow'}
               href={`#${text.toLowerCase()}`}
               fontWeight="bold"
               color="white"

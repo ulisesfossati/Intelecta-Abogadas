@@ -4,6 +4,9 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { Hoja1 } from './Hoja1/Hoja1'
 import { Servicios } from './Hoja2/Servicios'
 import { Informacion } from './Hoja3/Informacion'
+import { PreguntasFrecuentes } from './Hoja4/Hoja4'
+import { SegFooter } from './Footer/SegFooter'
+import { Equipo } from './Hoja5/Equipo'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -11,6 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Hoja1/>
       <Servicios/>
       <Informacion/>
+      <PreguntasFrecuentes/>
+      <Equipo/>
+      <SegFooter/>
     </ChakraProvider>
   </React.StrictMode>
 )
