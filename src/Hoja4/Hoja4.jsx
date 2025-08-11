@@ -43,7 +43,7 @@ const PreguntasFrecuentes = () => {
   };
 
   return (
-    <Box bg="#b9b5b5" minH="70vh" py="10" px="6">
+    <Box bg="#b9b5b5" minH="70vh" py="10" px="6" as="section">
       <Text
         as="h1"
         fontSize="5xl"

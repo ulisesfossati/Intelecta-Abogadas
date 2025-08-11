@@ -1,12 +1,17 @@
 import { Box, Divider, Image, Text } from '@chakra-ui/react';
 import React from 'react';
-import reunion from '../../public/Abogadas1.png';
+import reunion from '../../public/Abogadas.jpeg';
 
 const Informacion = () => {
   return (
-    <Box as="section" minH="70vh" w="100%" display="flex">
-      
-      {/* Lado izquierdo (texto) - más chico */}
+    <Box
+      as="section"
+      w="100%"
+      maxH="810px" // altura máxima más baja
+      display="flex"
+      alignItems="stretch"
+    >
+      {/* Lado izquierdo */}
       <Box
         flex="1.1"
         bg="#d4d4d4"
@@ -16,13 +21,7 @@ const Informacion = () => {
         px="8"
       >
         <Box maxW="500px" pr="10">
-          <Divider
-            borderColor="gray"
-            borderWidth="1px"
-            width="100px"
-            mb="6"
-          />
-
+          <Divider borderColor="gray" borderWidth="1px" width="100px" mb="6" />
           <Text textAlign="justify">
             Somos dos abogadas egresadas de la Universidad Nacional del Sur, con matrícula habilitante en el Colegio Público de la Abogacía de la Capital Federal.<br /><br />
             En Intelecta, la formación académica es parte del compromiso. Nos capacitamos de forma continua porque entendemos que proteger creaciones exige una mirada jurídica actualizada, crítica y en constante movimiento.<br /><br />
@@ -32,19 +31,16 @@ const Informacion = () => {
           </Text>
         </Box>
       </Box>
-      <Box
-        flex="0.9"
-        bg="#949393"
-        display="flex"
-        justifyContent="center"
-        alignItems="flex-end"
-      >
+
+      {/* Lado derecho */}
+      <Box flex="0.9" position="relative">
         <Image
           src={reunion}
           alt="Reunion"
-          maxW="600px"
           w="100%"
-          objectFit="contain"
+          h="100%"
+          objectFit="cover"
+          objectPosition="50% 20%"
         />
       </Box>
     </Box>

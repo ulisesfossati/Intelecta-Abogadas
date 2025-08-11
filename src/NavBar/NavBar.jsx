@@ -46,7 +46,7 @@ const NavBar = () => {
                 left: '0',
                 width: '0',
                 height: '2px',
-                bg: 'red.400',
+                bg: '#b1acac',
                 transition: 'width 0.4s ease',
               }}
               _hover={{
@@ -67,7 +67,7 @@ const NavBar = () => {
         bg="gray"
         w="90%"
         mx="auto"
-        mt="2"
+        mt="-4"
       />
     </Box>
   );

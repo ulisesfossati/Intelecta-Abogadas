@@ -1,7 +1,7 @@
 import { Box, Flex, Image, Text, Link } from '@chakra-ui/react';
 import React from 'react';
-import Delfina from '../../public/Abogada-Delfina.png';
-import Bianca from '../../public/Abogada-Bianca.png';
+import Delfina from '../../public/Abogada-Delfina2.jpeg';
+import Bianca from '../../public/Abogada-Bianca.jpeg';
 import Linkeding from '../../public/icons8-linkedin.svg';
 import Gmail from '../../public/icons8-gmail.svg';
 import Whatsapp from '../../public/icons8-whatsapp.svg';
@@ -32,7 +32,7 @@ const Equipo = () => {
         <Flex justify="center" gap="100px">
           {/* Tarjeta Delfina */}
           <Box border="2px solid #767575" h="100%">
-            <Image src={Delfina} alt="Delfina" w="360px" h="480px" />
+            <Image src={Delfina} alt="Delfina" w="400px" h="480px" />
             <Box
               borderTop="2px solid #767575"
               h="190px"
@@ -85,7 +85,7 @@ const Equipo = () => {
 
           {/* Tarjeta Bianca */}
           <Box border="2px solid #767575" h="100%">
-            <Image src={Bianca} alt="Bianca" w="360px" h="480px" />
+            <Image src={Bianca} alt="Bianca" w="400px" h="480px" />
             <Box
               borderTop="2px solid #767575"
               h="190px"

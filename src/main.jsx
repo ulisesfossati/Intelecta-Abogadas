@@ -7,6 +7,7 @@ import { Informacion } from './Hoja3/Informacion'
 import { PreguntasFrecuentes } from './Hoja4/Hoja4'
 import { SegFooter } from './Footer/SegFooter'
 import { Equipo } from './Hoja5/Equipo'
+import { Leyenda } from './Leyenda/Leyenda'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PreguntasFrecuentes/>
       <Equipo/>
       <SegFooter/>
+      <Leyenda/>
     </ChakraProvider>
   </React.StrictMode>
 )

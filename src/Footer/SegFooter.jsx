@@ -18,6 +18,8 @@ const SegFooter = () => {
     }
   };
 
+ 
+
   return (
     <Box
       as="footer"
@@ -45,8 +47,8 @@ const SegFooter = () => {
         <SimpleGrid columns={[3, 3, 1, 1]} spacing={3} textAlign="left">
           <Link
             textDecor="none"
-            color="#D6D6D6"
-            _hover={{ color: "#ea638c" }}
+            color="white"
+            _hover={{ color: "#b1acac" }}
             transition="color 0.3s ease"
             fontFamily="barlow"
             onClick={() => handleScroll('Inicio')}
@@ -59,8 +61,8 @@ const SegFooter = () => {
             href="/Bahia-Padel/#/Reservar"
             isExternal
             textDecor="none"
-            color="#D6D6D6"
-            _hover={{ color: "#ea638c" }}
+            color="white"
+            _hover={{ color: "#b1acac" }}
             transition="color 0.3s ease"
             fontFamily="barlow"
             whiteSpace="nowrap"
@@ -69,8 +71,8 @@ const SegFooter = () => {
           </Link>
           <Link
             textDecor="none"
-            color="#D6D6D6"
-            _hover={{ color: "#ea638c" }}
+            color="white"
+            _hover={{ color: "#b1acac" }}
             transition="color 0.3s ease"
             fontFamily="barlow"
             onClick={() => handleScroll('Torneos')}
@@ -83,8 +85,8 @@ const SegFooter = () => {
             href="/Bahia-Padel/#/admin"
             isExternal
             textDecor="none"
-            color="#D6D6D6"
-            _hover={{ color: "#ea638c" }}
+            color="white"
+            _hover={{ color: "#b1acac" }}
             transition="color 0.3s ease"
             fontFamily="barlow"
             whiteSpace="nowrap"
@@ -108,14 +110,23 @@ const SegFooter = () => {
           ¿Tenés dudas?<br />Escribinos cuando quieras, te respondemos lo antes posible.
         </Text>
         <Box display="flex" gap="0.5em" mt="1em">
-          <Link href="https://www.instagram.com/bahiapadel3/?hl=es-la" isExternal>
-            <Icon as={FaInstagram} boxSize="1.9em" color="white" transition="300ms" _hover={{ color: '#ea638c' }} />
+          <Link href="https://www.instagram.com/intelecta.abogadas/?hl=es-la" isExternal>
+            <Icon as={FaInstagram} boxSize="1.9em" color="white" transition="300ms" _hover={{ color: '#b1acac' }} />
           </Link>
-          <Link href="https://wa.me/5492914709293" isExternal>
-            <Icon as={FaWhatsapp} boxSize="1.9em" color="white" transition="300ms" _hover={{ color: '#ea638c' }} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/usuario" isExternal>
-            <Icon as={FaLinkedin} boxSize="1.9em" color="white" transition="300ms" _hover={{ color: '#ea638c' }} />
+          <Link
+  href="https://wa.me/5492914709293?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento."
+  isExternal
+>
+  <Icon
+    as={FaWhatsapp}
+    boxSize="1.9em"
+    color="white"
+    transition="300ms"
+    _hover={{ color: '#b1acac' }}
+  />
+</Link>
+          <Link href="https://ar.linkedin.com/company/intelecta-abogadas-propiedad-intelectual" isExternal>
+            <Icon as={FaLinkedin} boxSize="1.9em" color="white" transition="300ms" _hover={{ color: '#b1acac' }} />
           </Link>
         </Box>
       </Box>
@@ -166,8 +177,9 @@ const SegFooter = () => {
               <Link
                 href="mailto:estudio.pi.legales@gmail.com"
                 fontFamily="barlow"
-                color="#D6D6D6"
-                _hover={{ color: "#ea638c" }}
+                color="white"
+                transition="300ms"
+                _hover={{ color: "#b1acac" }}
                 cursor="pointer"
                 fontWeight="bold"
                 fontSize={["1.1rem", "1.1rem", "1.2rem", "1.1rem"]}
@@ -177,20 +189,22 @@ const SegFooter = () => {
               </Link>
             </Box>
 
-            <Box display="flex" alignItems="center" gap="0.2em" mt="1em">
+            {/* <Box display="flex" alignItems="center" gap="0.2em" mt="1em">
               <Text fontFamily="barlow" color="#cecece" whiteSpace="nowrap" fontSize={["1.1rem", "1.1rem", "1.2rem", "1.1rem"]}>Desarrollado por</Text>
               <Link 
                 fontFamily="barlow" 
-                color="#D6D6D6" 
+                color="white" 
                 href="https://www.instagram.com/ulisesfossati/?hl=es-la"
-                _hover={{ color: "#ea638c" }}
+                _hover={{ color: "#b1acac" }}
+                transition="300ms"
                 fontWeight="bold"
                 whiteSpace="nowrap"
                 fontSize={["1.1rem", "1.1rem", "1.2rem", "1.1rem"]}
+                isExternal
               >
                 Fossati Ulises
               </Link>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Box>
