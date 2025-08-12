@@ -10,6 +10,7 @@ const Informacion = () => {
       maxH="810px" // altura máxima más baja
       display="flex"
       alignItems="stretch"
+      id='Informacion'
     >
       {/* Lado izquierdo */}
       <Box

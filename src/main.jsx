@@ -8,6 +8,7 @@ import { PreguntasFrecuentes } from './Hoja4/Hoja4'
 import { SegFooter } from './Footer/SegFooter'
 import { Equipo } from './Hoja5/Equipo'
 import { Leyenda } from './Leyenda/Leyenda'
+import { EquipoAbogadas } from './EquipoAbogadas/EquipoAbogadas'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,8 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Hoja1/>
       <Servicios/>
       <Informacion/>
+      <EquipoAbogadas/>
       <PreguntasFrecuentes/>
-      <Equipo/>
+      {/* <Equipo/> */}
       <SegFooter/>
       <Leyenda/>
     </ChakraProvider>

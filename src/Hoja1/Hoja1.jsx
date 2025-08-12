@@ -7,6 +7,7 @@ const Hoja1 = () => {
   return (
     <Box
       as="section"
+      id='Inicio'
       minH="100vh"
       w="100%"
       position="relative"
@@ -16,6 +17,7 @@ const Hoja1 = () => {
       bgRepeat="no-repeat"
       overflow="hidden"
     >
+      {/* Capa oscura encima de la imagen */}
       <Box
         position="absolute"
         top="0"
@@ -26,8 +28,18 @@ const Hoja1 = () => {
         zIndex="1"
       />
 
+      {/* Contenido */}
       <Box position="relative" zIndex="2">
         <NavBar />
+
+        {/* Línea de Hoja1 que siempre queda en esta posición */}
+        <Box
+          h="2px"
+          bg="gray"
+          w="90%"
+          mx="auto"
+          mt="150px" // ajustá este valor para la altura que quieras
+        />
 
         <Box
           minH="calc(80vh - 80px)"
@@ -35,14 +47,12 @@ const Hoja1 = () => {
           alignItems="center"
           px="10"
         >
-          <Box w="40%" ml="20" mt="-40">
+          <Box w="40%" ml="20" mt="">
             <Text as="h1" fontSize="6xl" fontWeight="bold" color="white">
               INTELECTA ABOGADAS
             </Text>
             <Text as="h2" fontSize="lg" color="white" mb="6">
-              Somos un estudio jurídico especializado en propiedad intelectual y nuevas tecnologías.
-              Protegemos la creatividad y la innovación. Ofrecemos soluciones legales sólidas
-              acompañando a nuestros clientes en el resguardo de sus activos intangibles.
+            Protegemos lo que te hace único: somos un estudio de propiedad intelectual que convierte creaciones en activos, con asesoramiento humano, estratégico y a medida.
             </Text>
             <Button
               transition="300ms"

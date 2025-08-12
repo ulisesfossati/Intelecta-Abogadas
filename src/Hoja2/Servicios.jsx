@@ -14,7 +14,7 @@ import web from '../../public/icons8-web.png';
 
 const Servicios = () => {
   return (
-    <Box as="section" minH="70vh" w="100%" bg="#c1bdbd" py="12">
+    <Box as="section" minH="70vh" w="100%" bg="#c1bdbd" py="12" id='Servicios'>
       <Text
         as="h1"
         fontSize="5xl"
@@ -40,7 +40,7 @@ const Servicios = () => {
           <TarjetaServicio titulo="Registros de patentes y modelos de utilidad" icono={certificado} />
           <TarjetaServicio titulo="Registros de modelos y diseños industriales" icono={cabeza} />
           <TarjetaServicio titulo="Registro y alta de dominios web" icono={web} />
-          <TarjetaServicio titulo="Redacción de Términos y Condiciones y Políticas de Privacidad" icono={terminos} />
+          <TarjetaServicio titulo="Redacción de Términos y Condiciones" icono={terminos} />
           <TarjetaServicio titulo="Gestión del Brand Protection Program (BPP) en Mercado Libre" icono={etiqueta} />
           <TarjetaServicio titulo="Asesoramiento legal en la elaboración de acuerdos y contratos" icono={contrato} />
           <TarjetaServicio titulo="Constitución de sociedades" icono={grupo} />

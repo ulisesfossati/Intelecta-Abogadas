@@ -15,7 +15,7 @@ const Equipo = () => {
 
   return (
     <>
-      <Box as="section" minH="70vh" w="100%" bg="#d4d4d4" py="12">
+      <Box as="section" minH="70vh" w="100%" bg="#d4d4d4" py="12" id='Equipo'>
         <Text
           as="h1"
           fontSize="5xl"
@@ -31,10 +31,10 @@ const Equipo = () => {
 
         <Flex justify="center" gap="100px">
           {/* Tarjeta Delfina */}
-          <Box border="2px solid #767575" h="100%">
+          <Box border="6px solid #767575" h="100%">
             <Image src={Delfina} alt="Delfina" w="400px" h="480px" />
             <Box
-              borderTop="2px solid #767575"
+              borderTop="6px solid #767575"
               h="190px"
               display="flex"
               flexDirection="column"
@@ -84,10 +84,10 @@ const Equipo = () => {
           </Box>
 
           {/* Tarjeta Bianca */}
-          <Box border="2px solid #767575" h="100%">
+          <Box border="6px solid #767575" h="100%">
             <Image src={Bianca} alt="Bianca" w="400px" h="480px" />
             <Box
-              borderTop="2px solid #767575"
+              borderTop="6px solid #767575"
               h="190px"
               display="flex"
               flexDirection="column"

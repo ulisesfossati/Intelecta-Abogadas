@@ -58,8 +58,9 @@ const SegFooter = () => {
             INICIO
           </Link>
           <Link
-            href="/Bahia-Padel/#/Reservar"
-            isExternal
+            
+            onClick={() => handleScroll('Servicios')}
+            cursor="pointer"
             textDecor="none"
             color="white"
             _hover={{ color: "#b1acac" }}
@@ -75,15 +76,15 @@ const SegFooter = () => {
             _hover={{ color: "#b1acac" }}
             transition="color 0.3s ease"
             fontFamily="barlow"
-            onClick={() => handleScroll('Torneos')}
+            onClick={() => handleScroll('Informacion')}
             cursor="pointer"
             whiteSpace="nowrap"
           >
-            NOSOTRAS
+            INFORMACION
           </Link>
           <Link
-            href="/Bahia-Padel/#/admin"
-            isExternal
+            onClick={() => handleScroll('Equipo')}
+            cursor="pointer"
             textDecor="none"
             color="white"
             _hover={{ color: "#b1acac" }}
@@ -92,6 +93,18 @@ const SegFooter = () => {
             whiteSpace="nowrap"
           >
             CONTACTO
+          </Link>
+          <Link
+            onClick={() => handleScroll('Preguntas')}
+            cursor="pointer"
+            textDecor="none"
+            color="white"
+            _hover={{ color: "#b1acac" }}
+            transition="color 0.3s ease"
+            fontFamily="barlow"
+            whiteSpace="nowrap"
+          >
+            PREGUNTAS
           </Link>
         </SimpleGrid>
       </Box>
@@ -189,7 +202,7 @@ const SegFooter = () => {
               </Link>
             </Box>
 
-            {/* <Box display="flex" alignItems="center" gap="0.2em" mt="1em">
+            <Box display="flex" alignItems="center" gap="0.2em" mt="1em">
               <Text fontFamily="barlow" color="#cecece" whiteSpace="nowrap" fontSize={["1.1rem", "1.1rem", "1.2rem", "1.1rem"]}>Desarrollado por</Text>
               <Link 
                 fontFamily="barlow" 
@@ -204,7 +217,7 @@ const SegFooter = () => {
               >
                 Fossati Ulises
               </Link>
-            </Box> */}
+            </Box>
           </Box>
         </Box>
       </Box>

@@ -61,7 +61,7 @@ const TarjetaServicio = ({ titulo, icono, icono2x }) => {
         />
       </Box>
 
-      <Text fontWeight="medium" fontSize="sm" color="black">
+      <Text fontWeight="medium" fontSize="1.1rem" color="black">
         {titulo}
       </Text>
     </Box>
