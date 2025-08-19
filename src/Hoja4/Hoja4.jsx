@@ -67,7 +67,16 @@ const PreguntasFrecuentes = () => {
           const isOpen = activeIndex === index;
 
           return (
-            <WrapItem key={index} width={["100%", "45%", "30%", "18%"]}>
+            <MotionBox
+              // animación de entrada para cada item
+              as={WrapItem}
+              key={index}
+              width={["100%", "45%", "30%", "18%"]}
+              initial={{ opacity: 0, x: -80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.06 }}
+            >
               <Box
                 bg={isOpen ? "white" : "#818080"}
                 color={isOpen ? "black" : "white"}
@@ -110,7 +119,7 @@ const PreguntasFrecuentes = () => {
                   )}
                 </AnimatePresence>
               </Box>
-            </WrapItem>
+            </MotionBox>
           );
         })}
       </Wrap>

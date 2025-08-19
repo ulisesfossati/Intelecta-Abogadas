@@ -11,7 +11,29 @@ import marca from '../../public/icons8-marca.png';
 import terminos from '../../public/icons8-terminos.png';
 import web from '../../public/icons8-web.png';
 
+import { motion } from 'framer-motion';
+const MotionBox = motion(Box);
+
 const Servicios = () => {
+  const animBase = {
+    initial: { opacity: 0, x: -80 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true, amount: 0.3 },
+    transition: { duration: 0.7, ease: 'easeOut' },
+  };
+
+  const servicios = [
+    { titulo: "Gestión integral de marcas", icono: marca },
+    { titulo: "Gestión integral de derechos de autor", icono: derechoDeAutor },
+    { titulo: "Registros de patentes y modelos de utilidad", icono: certificado },
+    { titulo: "Registros de modelos y diseños industriales", icono: cabeza },
+    { titulo: "Registro y alta de dominios web", icono: web },
+    { titulo: "Redacción de Términos y Condiciones", icono: terminos },
+    { titulo: "Gestión del Brand Protection Program (BPP) en Mercado Libre", icono: etiqueta },
+    { titulo: "Asesoramiento legal en la elaboración de acuerdos y contratos", icono: contrato },
+    { titulo: "Constitución de sociedades", icono: grupo },
+  ];
+
   return (
     <Box
       as="section"
@@ -36,20 +58,23 @@ const Servicios = () => {
 
       <Box maxW={{ base: '100%', md: '1100px', lg: '1200px' }} w="100%" mx="auto" px={{ base: 4, md: 6 }}>
         <SimpleGrid
-          columns={{ base: 1, sm: 2, md: 2, lg: 3 }} // columnas responsivas
+          columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
           spacingX={{ base: 4, md: 6 }}
           spacingY={{ base: 6, md: 8 }}
           justifyItems="center"
         >
-          <TarjetaServicio titulo="Gestión integral de marcas" icono={marca} />
-          <TarjetaServicio titulo="Gestión integral de derechos de autor" icono={derechoDeAutor} />
-          <TarjetaServicio titulo="Registros de patentes y modelos de utilidad" icono={certificado} />
-          <TarjetaServicio titulo="Registros de modelos y diseños industriales" icono={cabeza} />
-          <TarjetaServicio titulo="Registro y alta de dominios web" icono={web} />
-          <TarjetaServicio titulo="Redacción de Términos y Condiciones" icono={terminos} />
-          <TarjetaServicio titulo="Gestión del Brand Protection Program (BPP) en Mercado Libre" icono={etiqueta} />
-          <TarjetaServicio titulo="Asesoramiento legal en la elaboración de acuerdos y contratos" icono={contrato} />
-          <TarjetaServicio titulo="Constitución de sociedades" icono={grupo} />
+          {servicios.map((s, i) => (
+            <MotionBox
+              key={s.titulo}
+              {...animBase}
+              transition={{ ...animBase.transition, delay: i * 0.15 }} // escalonado
+              w="100%"
+              display="flex"
+              justifyContent="center"
+            >
+              <TarjetaServicio titulo={s.titulo} icono={s.icono} />
+            </MotionBox>
+          ))}
         </SimpleGrid>
       </Box>
     </Box>

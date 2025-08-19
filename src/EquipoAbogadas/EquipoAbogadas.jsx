@@ -1,10 +1,14 @@
 import { Box, Image, Text, Link, Flex, Stack, Grid, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import Delfina from '../../public/Abogada-Delfina2.jpeg';
 import Bianca from '../../public/Abogada-Bianca.jpeg';
 import Linkeding from '../../public/icons8-linkedin.svg';
 import Gmail from '../../public/icons8-gmail.svg';
 import Whatsapp from '../../public/icons8-whatsapp.svg';
+
+const MotionBox = motion(Box);
 
 const iconStyle = {
   transition: 'transform 0.2s ease, opacity 0.2s ease',
@@ -40,6 +44,14 @@ const EquipoAbogadas = () => {
     </Box>
   );
 
+  // Props comunes de animación
+  const animBase = {
+    initial: { opacity: 0, x: -100 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true, amount: 0.5 },
+    transition: { duration: 0.8, ease: 'easeOut' },
+  };
+
   return (
     <Box as="section" minH="70dvh" w="100%" bg="#CCCACA" pt="12" id="Equipo" display="flex" flexDirection="column" position="relative" overflow="hidden">
       {/* Título */}
@@ -55,10 +67,12 @@ const EquipoAbogadas = () => {
         <Stack spacing={8} mt={8} align="center" mb={2}>
           {/* Delfina */}
           <Stack spacing={0} align="center" w="100%">
-            <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH}  borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
+            <MotionBox {...animBase}>
+              <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH}
+                borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
+            </MotionBox>
             <FranjaFullBleed>
               <Text fontWeight="bold" color="white" fontSize={mName} textAlign="center" lineHeight="short">
-                {/* 2 líneas: segunda invisible para conservar altura y no afecta mobile (estético parejo) */}
                 <Box as="span" display="block" whiteSpace="nowrap">DELFINA ALVAREZ</Box>
                 <Box as="span" display="block" visibility="hidden" aria-hidden>MARTINEZ</Box>
               </Text>
@@ -72,7 +86,13 @@ const EquipoAbogadas = () => {
 
           {/* Bianca */}
           <Stack spacing={0} align="center" w="100%">
-            <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH}  borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
+            <MotionBox
+              {...animBase}
+              transition={{ ...animBase.transition, delay: 0.15 }}
+            >
+              <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH}
+                borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
+            </MotionBox>
             <FranjaFullBleed>
               <Text fontWeight="bold" color="white" fontSize={mName} textAlign="center" lineHeight="short">
                 <Box as="span" display="block" whiteSpace="nowrap">BIANCA MASSARELLA</Box>
@@ -92,14 +112,22 @@ const EquipoAbogadas = () => {
       {layout === 'tablet' && (
         <Box mt="auto" w="100%">
           <Flex justify="center" align="flex-end" gap={mGap} zIndex={1} maxW="900px" mx="auto" px={6}>
-            <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH}  borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
-            <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH}  borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+            <MotionBox {...animBase}>
+              <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH}
+                borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+            </MotionBox>
+            <MotionBox
+              {...animBase}
+              transition={{ ...animBase.transition, delay: 0.15 }}
+            >
+              <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH}
+                borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+            </MotionBox>
           </Flex>
 
           <Box w="100vw" position="relative" left="50%" transform="translateX(-50%)" bg="#818080" py={5}>
             <Box maxW="900px" mx="auto" px={6}>
               <Grid templateColumns={`repeat(2, ${mImgW})`} columnGap={mGap} justifyContent="center" alignItems="center">
-                {/* Delfina: 2 líneas (2ª invisible) para alinear con la 1ª de Bianca */}
                 <Stack align="center" w={mImgW} spacing={3}>
                   <Text fontWeight="bold" color="white" fontSize={mName} textAlign="center" lineHeight="short">
                     <Box as="span" display="block" whiteSpace="nowrap">DELFINA ALVAREZ</Box>
@@ -112,7 +140,6 @@ const EquipoAbogadas = () => {
                   </Flex>
                 </Stack>
 
-                {/* Bianca */}
                 <Stack align="center" w={mImgW} spacing={3}>
                   <Text fontWeight="bold" color="white" fontSize={mName} textAlign="center" lineHeight="short">
                     <Box as="span" display="block" whiteSpace="nowrap">BIANCA MASSARELLA</Box>
@@ -137,10 +164,17 @@ const EquipoAbogadas = () => {
 
           <Box w="fit-content" mx="auto" mt="auto" zIndex={1} px={{ lg: 2 }}>
             <Flex gap={GAP_CLAMP} align="flex-end">
-              <Image src={Delfina} alt="Delfina" w={IMG_W_CLAMP} h={IMG_H_CLAMP} 
-                borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
-              <Image src={Bianca} alt="Bianca" w={IMG_W_CLAMP} h={IMG_H_CLAMP} 
-                borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+              <MotionBox {...animBase}>
+                <Image src={Delfina} alt="Delfina" w={IMG_W_CLAMP} h={IMG_H_CLAMP}
+                  borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+              </MotionBox>
+              <MotionBox
+                {...animBase}
+                transition={{ ...animBase.transition, delay: 0.15 }}
+              >
+                <Image src={Bianca} alt="Bianca" w={IMG_W_CLAMP} h={IMG_H_CLAMP}
+                  borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+              </MotionBox>
             </Flex>
           </Box>
 
@@ -155,7 +189,6 @@ const EquipoAbogadas = () => {
                 alignItems="center"
                 justifyItems="center"
               >
-                {/* Delfina: 2 líneas (2ª invisible) */}
                 <Stack w={TEXT_W_CLAMP} align="center" justify="center" spacing="14px">
                   <Text fontWeight="bold" color="white" fontSize={NAME_FS_CLAMP} textAlign="center" lineHeight="short">
                     <Box as="span" display="block" whiteSpace="nowrap">DELFINA ALVAREZ</Box>
@@ -171,7 +204,6 @@ const EquipoAbogadas = () => {
                 <Box w={IMG_W_CLAMP} />
                 <Box w={IMG_W_CLAMP} />
 
-                {/* Bianca */}
                 <Stack w={TEXT_W_CLAMP} align="center" justify="center" spacing="14px">
                   <Text fontWeight="bold" color="white" fontSize={NAME_FS_CLAMP} textAlign="center" lineHeight="short">
                     <Box as="span" display="block" whiteSpace="nowrap">BIANCA MASSARELLA</Box>
