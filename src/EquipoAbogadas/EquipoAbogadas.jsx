@@ -41,7 +41,7 @@ const EquipoAbogadas = () => {
   );
 
   return (
-    <Box as="section" minH="70dvh" w="100%" bg="#c1bdbd" pt="12" id="Equipo" display="flex" flexDirection="column" position="relative" overflow="hidden">
+    <Box as="section" minH="70dvh" w="100%" bg="#CCCACA" pt="12" id="Equipo" display="flex" flexDirection="column" position="relative" overflow="hidden">
       {/* Título */}
       <Box>
         <Text as="h1" fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} fontWeight="bold" color="black" textAlign="center" mb="4">
@@ -55,7 +55,7 @@ const EquipoAbogadas = () => {
         <Stack spacing={8} mt={8} align="center" mb={2}>
           {/* Delfina */}
           <Stack spacing={0} align="center" w="100%">
-            <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH} objectFit="cover" borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
+            <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH}  borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
             <FranjaFullBleed>
               <Text fontWeight="bold" color="white" fontSize={mName} textAlign="center" lineHeight="short">
                 {/* 2 líneas: segunda invisible para conservar altura y no afecta mobile (estético parejo) */}
@@ -72,7 +72,7 @@ const EquipoAbogadas = () => {
 
           {/* Bianca */}
           <Stack spacing={0} align="center" w="100%">
-            <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH} objectFit="cover" borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
+            <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH}  borderTop="3px solid #818080" borderRight="3px solid #818080" borderLeft="3px solid #818080" />
             <FranjaFullBleed>
               <Text fontWeight="bold" color="white" fontSize={mName} textAlign="center" lineHeight="short">
                 <Box as="span" display="block" whiteSpace="nowrap">BIANCA MASSARELLA</Box>
@@ -92,8 +92,8 @@ const EquipoAbogadas = () => {
       {layout === 'tablet' && (
         <Box mt="auto" w="100%">
           <Flex justify="center" align="flex-end" gap={mGap} zIndex={1} maxW="900px" mx="auto" px={6}>
-            <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH} objectFit="cover" borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
-            <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH} objectFit="cover" borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+            <Image src={Delfina} alt="Delfina" w={mImgW} h={mImgH}  borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
+            <Image src={Bianca} alt="Bianca" w={mImgW} h={mImgH}  borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
           </Flex>
 
           <Box w="100vw" position="relative" left="50%" transform="translateX(-50%)" bg="#818080" py={5}>
@@ -137,9 +137,9 @@ const EquipoAbogadas = () => {
 
           <Box w="fit-content" mx="auto" mt="auto" zIndex={1} px={{ lg: 2 }}>
             <Flex gap={GAP_CLAMP} align="flex-end">
-              <Image src={Delfina} alt="Delfina" w={IMG_W_CLAMP} h={IMG_H_CLAMP} objectFit="cover"
+              <Image src={Delfina} alt="Delfina" w={IMG_W_CLAMP} h={IMG_H_CLAMP} 
                 borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
-              <Image src={Bianca} alt="Bianca" w={IMG_W_CLAMP} h={IMG_H_CLAMP} objectFit="cover"
+              <Image src={Bianca} alt="Bianca" w={IMG_W_CLAMP} h={IMG_H_CLAMP} 
                 borderTop="4px solid #818080" borderRight="4px solid #818080" borderLeft="4px solid #818080" />
             </Flex>
           </Box>

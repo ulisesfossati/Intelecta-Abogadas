@@ -41,48 +41,51 @@ const Hoja1 = () => {
         <Box
           h="2px"
           bg="gray"
-          w="90%"
+          w={{ base: "92%", md: "93%", lg: "90%" }}
           mx="auto"
           mt={{ base: "120px", md: "120px" ,lg: "150px" }}
         />
+<Box
+  minH="calc(80vh - 80px)"
+  display="flex"
+  alignItems="center"
+  px={{ base: '1.5em', md: '3em', lg: '6em', xl: '8em' }} // 🔹 márgenes prolijos en cada breakpoint
+>
+  <Box w="100%">
+    <Text
+      as="h1"
+      fontSize={{ base: '6xl', md: '6xl' }}
+      fontWeight="bold"
+      color="white"
+      whiteSpace={useBreakpointValue({ base: 'pre-line', md: 'pre-line', lg: 'nowrap' })}
+    >
+      {titulo}
+    </Text>
+    <Text as="h2" fontSize="lg" color="white" mb="6">
+      Protegemos lo que te hace único: somos un estudio de propiedad intelectual que convierte
+      creaciones en activos.<br />
+      Con asesoramiento humano, estratégico y a medida.
+    </Text>
+    <Button
+    cursor="pointer"
+      transition="300ms"
+      bg="white"
+      color="black"
+      _hover={{ bg: '#b1acac' }}
+      onClick={() =>
+        window.open(
+          'https://wa.me/5492915099180?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento.',
+          '_blank'
+        )
+      }
+    >
+      CONTACTO
+    </Button>
+  </Box>
+</Box>
 
-        <Box
-          minH="calc(80vh - 80px)"
-          display="flex"
-          alignItems="center"
-          
-          px={{ base: '5', md: '2' }}
-        >
-          <Box w={{ base: '100%', md: '100%' }} ml={{ base: '0', md: '5' }}>
-            <Text
-              as="h1"
-              fontSize={{ base: '6xl', md: '6xl' }}
-              fontWeight="bold"
-              color="white"
-              whiteSpace={useBreakpointValue({ base: 'pre-line', md: 'pre-line', lg: 'nowrap' })} 
-            >
-              {titulo}
-            </Text>
-            <Text as="h2" fontSize="lg" color="white"  mb="6">
-            Protegemos lo que te hace único: somos un estudio de propiedad intelectual que convierte creaciones en activos.<br/>
-Con asesoramiento humano, estratégico y a medida.
-            </Text>
-            <Button
-              transition="300ms"
-              bg="white"
-              color="black"
-              _hover={{ bg: '#b1acac' }}
-              onClick={() =>
-                window.open(
-                  'https://wa.me/5492915099180?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento.',
-                  '_blank'
-                )
-              }
-            >
-              CONTACTO
-            </Button>
-          </Box>
-        </Box>
+
+
       </Box>
     </Box>
   );

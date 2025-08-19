@@ -9,7 +9,7 @@ const SegFooter = () => {
     const section = document.getElementById(id);
     if (!section) return;
     const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
-    const offset = 100;
+    const offset = 170;
     const targetPosition = sectionPosition - offset;
     window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   };
@@ -102,9 +102,11 @@ const SegFooter = () => {
             <Text fontWeight="bold" color="#D6D6D6" fontFamily="barlow" fontSize="1rem" mb="0.1em">
               HORARIOS DE ATENCIÓN
             </Text>
-            <Text fontFamily="barlow" color="#cecece" fontSize="1rem">
-              MARTES A SÁBADOS : 10:00 - 20:00
-            </Text>
+            <Text fontFamily="barlow" color="#cecece">
+            Tenés dudas?
+            <br />Escribinos cuando quieras.
+            <br />Te respondemos lo antes posible.
+          </Text>
           </Box>
           <Flex gap="0.7em">
             <Link href="https://www.instagram.com/intelecta.abogadas/?hl=es-la" isExternal aria-label="Instagram">
@@ -210,18 +212,19 @@ const SegFooter = () => {
       {/* ============== DESKTOP (lg+) – layout original ============== */}
       <Box display={{ base: 'none', lg: 'flex' }} p="2em 0" flexWrap="wrap" flexDirection="row">
         {/* Columna 1: logo + links */}
-        <Box 
+        <Box
+        
           display="flex"
           alignItems="center"
           flexDir="row"
           borderRight="3px solid white"
-          w="28%"
-          justifyContent="end"
+          w="auto"
+          justifyContent="center"
           gap="2em"
           p="2em 2em"
         >
-          <Img h="12em" w="9em" filter="brightness(1.5)" src={logo} alt="Intelecta Abogadas" />
-          <NavGrid />
+          <Img h="12em" w="10em" filter="brightness(1.8)" src={logo} alt="Intelecta Abogadas" />
+          <NavGrid/>
         </Box>
 
         {/* Columna 2: CTA + redes */}
@@ -230,7 +233,7 @@ const SegFooter = () => {
             ESTAMOS PARA AYUDARTE
           </Text>
           <Text fontFamily="barlow" color="#cecece">
-            ¿Tenés dudas?
+            Tenés dudas?
             <br />Escribinos cuando quieras.
             <br />Te respondemos lo antes posible.
           </Text>

@@ -17,7 +17,7 @@ const Servicios = () => {
       as="section"
       minH="70vh"
       w="100%"
-      bg="#c1bdbd"
+      bg="#CCCACA"
       py={{ base: 10, md: 12, lg: 16 }}
       id="Servicios"
     >

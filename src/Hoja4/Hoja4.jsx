@@ -43,7 +43,7 @@ const PreguntasFrecuentes = () => {
 
   return (
     <Box
-      bg="#b9b5b5"
+      bg="#CCCACA"
       as="section"
       id="Preguntas"
       py={{ base: 10, md: 12 }}

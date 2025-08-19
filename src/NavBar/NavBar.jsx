@@ -110,6 +110,7 @@ const NavBar = () => {
 
       {/* Navbar */}
       <Box
+      
         as="nav"
         position="fixed"
         top={`${topOffset}px`}
@@ -126,8 +127,9 @@ const NavBar = () => {
           h="100%"
           px={{ base: 4, md: 6, lg: 0 }}
           w="100%"
-          maxW="1400px"
+          maxW={{ lg: "auto", xl: "1200", "2xl": "1400" }}
           mx="auto"
+          
         >
           {/* Foco (izquierda). No se mueve de lugar; solo baja un poquito cuando no está expandido */}
           <Image
@@ -143,14 +145,15 @@ const NavBar = () => {
           {/* Logo desktop */}
           <Image
             src={logo}
+            
             alt="Logo"
             w={{ base: '0px', lg: '140px' }}
-            filter="brightness(1.5)"
+            filter="brightness(1.8)"
             display={{ base: 'none', lg: 'block' }}
           />
 
           {/* Links desktop */}
-          <HStack spacing={{ lg: '5em', xl: '6em' }} display={{ base: 'none', lg: 'flex' }}>
+          <HStack spacing={{ lg: '5em', xl: '6em' }} display={{ base: 'none', lg: 'flex' }} >
             {items.map((item) => (
               <Link key={item.id} {...linkStyle} onClick={() => handleScroll(item.id)}>
                 {item.text}
