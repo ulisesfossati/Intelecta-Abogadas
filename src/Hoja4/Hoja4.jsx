@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Box,
   Text,
-  Divider,
   Icon,
   Wrap,
   WrapItem,
@@ -43,21 +42,27 @@ const PreguntasFrecuentes = () => {
   };
 
   return (
-    <Box bg="#b9b5b5" minH="70vh" py="10" px="6" as="section" id='Preguntas'>
+    <Box
+      bg="#b9b5b5"
+      as="section"
+      id="Preguntas"
+      py={{ base: 10, md: 12 }}
+      px={{ base: 4, sm: 6, md: 8 }}
+    >
       <Text
         as="h1"
-        fontSize="5xl"
+        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
         fontWeight="bold"
         color="black"
         textAlign="center"
-        mb="4"
+        mb={{ base: 3, md: 4 }}
       >
         PREGUNTAS FRECUENTES
       </Text>
 
       <Box h="2px" bg="gray" w="90%" mx="auto" mb="10" />
 
-      <Wrap spacing="20px" justify="center">
+      <Wrap spacing="20px" justify="flex-start">
         {preguntasYRespuestas.map((item, index) => {
           const isOpen = activeIndex === index;
 

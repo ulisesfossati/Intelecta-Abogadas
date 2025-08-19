@@ -1,13 +1,18 @@
-import { Box, Text, Button } from '@chakra-ui/react';
+import { Box, Text, Button, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
 import Edificios from '../../public/Principla.jpg';
 import { NavBar } from '../NavBar/NavBar';
 
 const Hoja1 = () => {
+  const titulo = useBreakpointValue({
+    base: 'INTELECTA\nABOGADAS', // móvil: en dos líneas
+    md: 'INTELECTA ABOGADAS',    // tablet y escritorio: todo junto
+  });
+
   return (
     <Box
       as="section"
-      id='Inicio'
+      id="Inicio"
       minH="100vh"
       w="100%"
       position="relative"
@@ -17,7 +22,7 @@ const Hoja1 = () => {
       bgRepeat="no-repeat"
       overflow="hidden"
     >
-      {/* Capa oscura encima de la imagen */}
+      {/* Capa oscura encima */}
       <Box
         position="absolute"
         top="0"
@@ -32,27 +37,35 @@ const Hoja1 = () => {
       <Box position="relative" zIndex="2">
         <NavBar />
 
-        {/* Línea de Hoja1 que siempre queda en esta posición */}
+        {/* Línea decorativa */}
         <Box
           h="2px"
           bg="gray"
           w="90%"
           mx="auto"
-          mt="150px" // ajustá este valor para la altura que quieras
+          mt={{ base: "120px", md: "120px" ,lg: "150px" }}
         />
 
         <Box
           minH="calc(80vh - 80px)"
           display="flex"
           alignItems="center"
-          px="10"
+          
+          px={{ base: '5', md: '2' }}
         >
-          <Box w="40%" ml="20" mt="">
-            <Text as="h1" fontSize="6xl" fontWeight="bold" color="white">
-              INTELECTA ABOGADAS
+          <Box w={{ base: '100%', md: '100%' }} ml={{ base: '0', md: '5' }}>
+            <Text
+              as="h1"
+              fontSize={{ base: '6xl', md: '6xl' }}
+              fontWeight="bold"
+              color="white"
+              whiteSpace={useBreakpointValue({ base: 'pre-line', md: 'pre-line', lg: 'nowrap' })} 
+            >
+              {titulo}
             </Text>
-            <Text as="h2" fontSize="lg" color="white" mb="6">
-            Protegemos lo que te hace único: somos un estudio de propiedad intelectual que convierte creaciones en activos, con asesoramiento humano, estratégico y a medida.
+            <Text as="h2" fontSize="lg" color="white"  mb="6">
+            Protegemos lo que te hace único: somos un estudio de propiedad intelectual que convierte creaciones en activos.<br/>
+Con asesoramiento humano, estratégico y a medida.
             </Text>
             <Button
               transition="300ms"

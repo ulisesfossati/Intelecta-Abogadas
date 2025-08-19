@@ -11,29 +11,35 @@ import marca from '../../public/icons8-marca.png';
 import terminos from '../../public/icons8-terminos.png';
 import web from '../../public/icons8-web.png';
 
-
 const Servicios = () => {
   return (
-    <Box as="section" minH="70vh" w="100%" bg="#c1bdbd" py="12" id='Servicios'>
+    <Box
+      as="section"
+      minH="70vh"
+      w="100%"
+      bg="#c1bdbd"
+      py={{ base: 10, md: 12, lg: 16 }}
+      id="Servicios"
+    >
       <Text
         as="h1"
-        fontSize="5xl"
+        fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
         fontWeight="bold"
         color="black"
         textAlign="center"
-        mb="4"
+        mb={{ base: 3, md: 4 }}
       >
         NUESTROS SERVICIOS
       </Text>
 
-      <Box h="2px" bg="gray" w="90%" mx="auto" mb="10" />
+      <Box h="2px" bg="gray" w={{ base: '92%', md: '90%' }} mx="auto" mb={{ base: 6, md: 10 }} />
 
-      <Box maxW="1200px" w="100%" mx="auto" px="4">
+      <Box maxW={{ base: '100%', md: '1100px', lg: '1200px' }} w="100%" mx="auto" px={{ base: 4, md: 6 }}>
         <SimpleGrid
-          columns={3}            // fuerza 3 columnas
-          spacingX="2"           // menor separación horizontal
-          spacingY="4"
-          justifyItems="center"  // centra cada tarjeta en su celda
+          columns={{ base: 1, sm: 2, md: 2, lg: 3 }} // columnas responsivas
+          spacingX={{ base: 4, md: 6 }}
+          spacingY={{ base: 6, md: 8 }}
+          justifyItems="center"
         >
           <TarjetaServicio titulo="Gestión integral de marcas" icono={marca} />
           <TarjetaServicio titulo="Gestión integral de derechos de autor" icono={derechoDeAutor} />

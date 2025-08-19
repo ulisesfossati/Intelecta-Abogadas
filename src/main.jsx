@@ -10,6 +10,7 @@ import { Equipo } from './Hoja5/Equipo'
 import { Leyenda } from './Leyenda/Leyenda'
 import { EquipoAbogadas } from './EquipoAbogadas/EquipoAbogadas'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider>
