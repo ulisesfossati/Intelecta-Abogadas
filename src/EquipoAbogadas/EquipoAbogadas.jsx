@@ -78,7 +78,8 @@ const EquipoAbogadas = () => {
               </Text>
               <Flex gap={4} mt={3} justify="center" align="center">
                 <Link href="mailto:estudio.pi.legales@gmail.com" isExternal><Image src={Gmail} alt="Gmail" boxSize={mIcon} {...iconStyle} /></Link>
-                <Link href="https://wa.me/5492915099180" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
+                <Link href="https://wa.me/5492915099180?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento
+" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
                 <Link href="https://ar.linkedin.com/in/delfinaalvarezp" isExternal><Image src={Linkeding} alt="LinkedIn" boxSize={mIcon} {...iconStyle} /></Link>
               </Flex>
             </FranjaFullBleed>
@@ -100,7 +101,8 @@ const EquipoAbogadas = () => {
               </Text>
               <Flex gap={4} mt={3} justify="center" align="center">
                 <Link href="mailto:estudio.pi.legales@gmail.com" isExternal><Image src={Gmail} alt="Gmail" boxSize={mIcon} {...iconStyle} /></Link>
-                <Link href="https://wa.me/5492915724707" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
+                <Link href="https://wa.me/5492915724707?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento
+" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
                 <Link href="https://ar.linkedin.com/in/bianca-massarella-martinez-5909b02a3" isExternal><Image src={Linkeding} alt="LinkedIn" boxSize={mIcon} {...iconStyle} /></Link>
               </Flex>
             </FranjaFullBleed>
@@ -135,7 +137,8 @@ const EquipoAbogadas = () => {
                   </Text>
                   <Flex gap={6} justify="center" align="center">
                     <Link href="mailto:estudio.pi.legales@gmail.com" isExternal><Image src={Gmail} alt="Gmail" boxSize={mIcon} {...iconStyle} /></Link>
-                    <Link href="https://wa.me/5492915099180" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
+                    <Link href="https://wa.me/5492915099180?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento
+" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
                     <Link href="https://ar.linkedin.com/in/delfinaalvarezp" isExternal><Image src={Linkeding} alt="LinkedIn" boxSize={mIcon} {...iconStyle} /></Link>
                   </Flex>
                 </Stack>
@@ -147,7 +150,8 @@ const EquipoAbogadas = () => {
                   </Text>
                   <Flex gap={6} justify="center" align="center">
                     <Link href="mailto:estudio.pi.legales@gmail.com" isExternal><Image src={Gmail} alt="Gmail" boxSize={mIcon} {...iconStyle} /></Link>
-                    <Link href="https://wa.me/5492915724707" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
+                    <Link href="https://wa.me/5492915724707?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento
+" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={mIcon} {...iconStyle} /></Link>
                     <Link href="https://ar.linkedin.com/in/bianca-massarella-martinez-5909b02a3" isExternal><Image src={Linkeding} alt="LinkedIn" boxSize={mIcon} {...iconStyle} /></Link>
                   </Flex>
                 </Stack>
@@ -196,7 +200,8 @@ const EquipoAbogadas = () => {
                   </Text>
                   <Flex gap="20px" justify="center">
                     <Link href="mailto:estudio.pi.legales@gmail.com" isExternal><Image src={Gmail} alt="Gmail" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
-                    <Link href="https://wa.me/5492915099180" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
+                    <Link href="https://wa.me/5492915099180?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento
+" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
                     <Link href="https://ar.linkedin.com/in/delfinaalvarezp" isExternal><Image src={Linkeding} alt="LinkedIn" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
                   </Flex>
                 </Stack>
@@ -211,7 +216,8 @@ const EquipoAbogadas = () => {
                   </Text>
                   <Flex gap="20px" justify="center">
                     <Link href="mailto:estudio.pi.legales@gmail.com" isExternal><Image src={Gmail} alt="Gmail" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
-                    <Link href="https://wa.me/5492915724707" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
+                    <Link href="https://wa.me/5492915724707?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento
+" isExternal><Image src={Whatsapp} alt="WhatsApp" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
                     <Link href="https://ar.linkedin.com/in/bianca-massarella-martinez-5909b02a3" isExternal><Image src={Linkeding} alt="LinkedIn" boxSize={ICON_SZ_CLAMP} {...iconStyle} /></Link>
                   </Flex>
                 </Stack>
