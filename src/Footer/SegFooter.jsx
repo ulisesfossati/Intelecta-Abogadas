@@ -113,7 +113,7 @@ const SegFooter = () => {
               <Icon as={FaInstagram} boxSize="1.9em" transition="300ms" _hover={{ color: '#b1acac' }} />
             </Link>
             <Link
-              href="https://wa.me/5492914709293?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento."
+              href="https://wa.me/5492915099180?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento."
               isExternal
               aria-label="WhatsApp"
             >
@@ -242,7 +242,7 @@ const SegFooter = () => {
               <Icon as={FaInstagram} boxSize="1.9em" transition="300ms" _hover={{ color: '#b1acac' }} />
             </Link>
             <Link
-              href="https://wa.me/5492914709293?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento."
+              href="https://wa.me/5492915099180?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios.%20Me%20gustar%C3%ADa%20recibir%20asesoramiento."
               isExternal
               aria-label="WhatsApp"
             >

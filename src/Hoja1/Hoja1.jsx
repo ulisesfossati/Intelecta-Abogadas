@@ -64,7 +64,7 @@ const Hoja1 = () => {
     <Text as="h2" fontSize="lg" color="white" mb="6">
       Protegemos lo que te hace único: somos un estudio de propiedad intelectual que convierte
       creaciones en activos.<br />
-      Con asesoramiento humano, estratégico y a medida.
+      Brindamos asesoramiento estratégico y a medida.
     </Text>
     <Button
     cursor="pointer"
